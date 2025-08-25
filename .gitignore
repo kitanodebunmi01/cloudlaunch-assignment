@@ -1,0 +1,5 @@
+# do NOT commit local AWS credentials
+*.csv
+*.pem
+.env
+/.aws
