@@ -12,16 +12,16 @@
       "Effect": "Allow",
       "Action": ["s3:ListBucket"],
       "Resource": [
-        "arn:aws:s3:::cloudlaunch-site-bucket",
-        "arn:aws:s3:::cloudlaunch-private-bucket",
-        "arn:aws:s3:::cloudlaunch-visible-only-bucket"
+        "arn:aws:s3:::cloudlaunch-sitebucket",
+        "arn:aws:s3:::cloudlaunch-privatebucket",
+        "arn:aws:s3:::cloudlaunch-visible-onlybucket"
       ]
     },
     {
       "Sid": "ReadSiteBucketObjects",
       "Effect": "Allow",
       "Action": ["s3:GetObject","s3:PutObject"],
-      "Resource": "arn:aws:s3:::cloudlaunch-site-bucket/*"
+      "Resource": "arn:aws:s3:::cloudlaunch-sitebucket/*"
     },
     {
       "Sid": "RWPrivateBucketNoDelete",
@@ -34,8 +34,8 @@
         "s3:ListBucketMultipartUploads"
       ],
       "Resource": [
-        "arn:aws:s3:::cloudlaunch-private-bucket",
-        "arn:aws:s3:::cloudlaunch-private-bucket/*"
+        "arn:aws:s3:::cloudlaunch-privatebucket",
+        "arn:aws:s3:::cloudlaunch-privatebucket/*"
       ]
     },
     {
@@ -47,16 +47,16 @@
         "s3:DeleteObject",
         "s3:DeleteObjectVersion"
       ],
-      "Resource": "arn:aws:s3:::cloudlaunch-visible-only-bucket/*"
+      "Resource": "arn:aws:s3:::cloudlaunch-visible-onlybucket/*"
     },
     {
       "Sid": "DenyDeletesEverywhere",
       "Effect": "Deny",
       "Action": ["s3:DeleteObject","s3:DeleteObjectVersion"],
       "Resource": [
-        "arn:aws:s3:::cloudlaunch-site-bucket/*",
-        "arn:aws:s3:::cloudlaunch-private-bucket/*",
-        "arn:aws:s3:::cloudlaunch-visible-only-bucket/*"
+        "arn:aws:s3:::cloudlaunch-sitebucket/*",
+        "arn:aws:s3:::cloudlaunch-privatebucket/*",
+        "arn:aws:s3:::cloudlaunch-visible-onlybucket/*"
       ]
     },
     {
