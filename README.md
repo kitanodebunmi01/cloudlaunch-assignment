@@ -1,5 +1,8 @@
 # CloudLaunch – AltSchool Assignment
 
+## Overview
+CloudLaunch is a lightweight platform with a public static website and private internal storage. This repo documents S3 hosting, IAM scoping, and a secure VPC layout.
+
 ## Task 1 – S3 + IAM
 - Buckets:
   - cloudlaunch-site-bucket (S3 website)
@@ -23,11 +26,4 @@
   - cloudlaunch-app-sg (HTTP 80 from 10.0.0.0/16)
   - cloudlaunch-db-sg (MySQL 3306 from 10.0.2.0/24)
 
-## IAM Policy JSON
-See file: `cloudlaunch-user-policy.json`
-
-- Account ID: 522814709864
-- Console URL: https://522814709864.signin.aws.amazon.com/console
-- Username: 522814709864
-- Temporary password: Cloudlaunch@123 
 
